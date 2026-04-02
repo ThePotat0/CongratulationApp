@@ -1,0 +1,27 @@
+﻿@{
+    IEnumerable<ContactEntity>? contactEntities = ViewBag.Contacts;
+}
+<div>
+    @if (contactEntities.Any())
+    {
+        <div>
+            @foreach (ContactEntity entity in contactEntities)
+            {
+                <div>
+                    <a asp-controller="Home" asp-action="ContactsEdit" asp-route-id="@entity.Id">Edit</a>
+                    <form style="display: inline-block;" id="form-contact-@entity.Id" asp-area=""
+                          asp-controller="Home" asp-action="ContactsDelete" method="post">
+                        <input type="hidden" name="id" value="@entity.Id" />
+                        <a href="#" onclick="document.getElementById('form-contact-@entity.Id').submit();">Delete</a>
+                    </form>
+                    <span>
+                        @($"{entity.Name}");
+                    </span>
+                    <span>
+                        @($"{entity.Birthday}");
+                    </span>
+                </div>
+            }
+        </div>
+    }
+</div>

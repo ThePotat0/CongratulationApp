@@ -1,0 +1,24 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+	<head>
+		@await Html.PartialAsync("_CssPartial")
+		@await Html.PartialAsync("_MetaPartial")
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#" class="icon solid fa-home"><span>Home</span></a>
+						<a href="#work" class="icon solid fa-folder"><span>All contacts</span></a>
+						<a href="#contact" class="icon solid fa-envelope"><span>Admin</span></a>
+					</nav>
+				@RenderBody()
+				@await Html.PartialAsync("_FooterPartial")
+			</div>
+			@await Html.PartialAsync("_ScriptsPartial")
+
+	</body>
+</html>

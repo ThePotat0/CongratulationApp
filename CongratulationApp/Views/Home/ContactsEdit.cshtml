@@ -1,0 +1,25 @@
+﻿<header>
+    <h2>Update contact</h2>
+</header>
+<form asp-area="" asp-controller="Home" asp-action="ContactsEdit" method="post">
+    <div class="row">
+        <div class="col-6 col-12-medium">
+            <input type="text" name="name" placeholder="Name" />
+        </div>
+        <div class="col-6 col-12-medium">
+            <input type="text" name="email" placeholder="Email" />
+        </div>
+        <div class="col-12">
+            <input type="date" name="birthday" placeholder="Birthday date" />
+        </div>
+        <div class="col-12">
+            <input type="text" name="phone" placeholder="Phone number" />
+        </div>
+        <div class="div-box">
+            <input type="file" name="photo" id="image" />
+        </div>
+        <div class="col-12">
+            <input type="submit" value="Update" />
+        </div>
+    </div>
+</form>

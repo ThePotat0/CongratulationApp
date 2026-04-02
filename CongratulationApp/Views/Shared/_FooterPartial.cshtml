@@ -1,0 +1,11 @@
+﻿@inject IConfiguration config
+@{
+    AppConfig? appConfig = config.GetSection("Project").Get<AppConfig>();
+}
+<!-- Footer -->
+<div id="footer">
+	<ul class="copyright">
+		<li>&copy; @appConfig?.company.CompanyName</li>
+		<li>Developer: <a href="https://markthepotat.itch.io/">See more</a></li>
+	</ul>
+</div>
