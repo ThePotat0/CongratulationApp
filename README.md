@@ -7,7 +7,7 @@ MVC Веб приложение для производственной прак
 - Domain Driven Design (DDD)
 - Миграции
 - Репозитории
-- 
+
 !!! Не решена проблема развертывания на конечной машине !!!
 
 !!! Нарушение SOLID !!!
@@ -19,7 +19,7 @@ Technology stack:
 - Domain-Driven Design (DDD)
 - Migrations
 - Repositories
-- 
+
 !!! Deployment to the target machine has not been resolved !!!
 
 !!! SOLID violation !!!
