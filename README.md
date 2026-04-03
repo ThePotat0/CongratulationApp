@@ -4,6 +4,7 @@ MVC Веб приложение для производственной прак
 
 Стек технологий и подходов:
 - Dependency Injection
+- MVC
 - Асинхронный код
 - Domain Driven Design (DDD)
 - Миграции
@@ -15,6 +16,7 @@ MVC Web Application for Internship 2026-03-23 – 2026-04-03
 
 Technology stack and patterns:
 - Dependency Injection
+- MVC
 - Asynchronous code
 - Domain-Driven Design (DDD)
 - Migrations
