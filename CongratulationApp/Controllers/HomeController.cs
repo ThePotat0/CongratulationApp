@@ -54,11 +54,6 @@ namespace CongratulationApp.Controllers
             return path;
         }
 
-        /// <summary>
-        /// ^^^Распихать по файлам при пейвой возможности^^^
-        /// </summary>
-
-       
         public async Task<IActionResult> Index()
         {
             ViewBag.Contacts = await _dataManager.Contacts.GetContactEntitiesAsync();

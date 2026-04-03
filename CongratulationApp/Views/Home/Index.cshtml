@@ -42,7 +42,7 @@
                 {
                     foreach (ContactEntity entity in contactEntities)
                     {
-                        if (entity.Birthday == nearest!.Contact.Birthday && (entity != nearest.Contact))
+                        if ((entity.Birthday.Month == nearest!.Contact.Birthday.Month && entity.Birthday.Day == nearest!.Contact.Birthday.Day) && (entity != nearest.Contact))
                         {
                             atTheSameDate.Add(entity);
                         }
@@ -51,7 +51,7 @@
             }
             <p>
                 @(
-                    atTheSameDate.Any() ? "Also:" : "Don`t forget!"
+                    atTheSameDate.Any() ? "Also at this date:" : "Don`t forget!"
                 )
             </p>
             <div>
