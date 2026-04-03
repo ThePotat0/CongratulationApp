@@ -5,7 +5,6 @@
 }
 <!-- Main -->
 <div id="main">
-
     <!-- Current birthday -->
     <article id="home" class="panel intro">
         <header>
@@ -82,7 +81,7 @@
         <header>
             <h2>Add new birthday</h2>
         </header>
-        <form asp-area="" asp-controller="Home" asp-action="ContactsEdit" method="post">
+        <form asp-area="" asp-controller="Home" asp-action="ContactsEdit" method="post" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-6 col-12-medium">
                     <input type="text" name="name" placeholder="Name" />
@@ -96,14 +95,17 @@
                 <div class="col-12">
                     <input type="text" name="phone" placeholder="Phone number" />
                 </div>
-                <div class="div-box">
-                    <input type="file" name="photo" id="image" />
+                <div class="col-12">
+                    <div>
+                        <label for="Image">Image:</label>
+                        <input type="file" name="image" accept="image/*" />
+                    </div>
                 </div>
                 <div class="col-12">
                     <input type="submit" value="Add" />
                 </div>
+                <div asp-validation-summary="All"></div>
             </div>
         </form>
     </article>
-
 </div>

@@ -25,8 +25,11 @@ namespace CongratulationApp.Controllers
         [HttpPost]
         public async Task<IActionResult> ContactsEdit(ContactEntity entity, IFormFile? image)
         {
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid) 
+            {
+                ViewBag.Contacts = await _dataManager.Contacts.GetContactEntitiesAsync();
                 return View(entity);
+            }
             if (image != null) 
             {
                 entity.Photo = image.FileName;
